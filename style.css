@@ -1,0 +1,708 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: attila;
+    color: #D5CDC4;
+}
+@font-face {
+    font-family: attila;
+    src: url(./attila.ttf);
+}
+html,body{
+    width: 100%;
+    height: 100%;
+}
+#main
+{
+    position: relative;
+    overflow-x: hidden;
+    background-color: #232025;
+}
+#full-screen{
+    width: 100vw;
+    height: 100vh;
+    z-index: 999;
+    background-color: #D5CDC4;
+    position: absolute;
+    transform: translateY(-100%);
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s;
+    transition-timing-function: ease-in;
+    overflow: hidden;
+}
+#full-screen h1{
+    color: #232025;
+}
+#full-menu{
+    font-size: 200px;
+    top: 15%;
+    left: 5%;
+    color: #232025;
+    position: absolute;
+    z-index: 999;
+}
+#full{
+    width: 38vw;
+    height: 45vh;
+    position: absolute;
+    top: 46%;
+    left: 6%;
+    display: flex;
+    justify-content: space-between;
+    line-height: 45px;
+    font-family: gilroy;
+}
+#full-left h3{
+    color: #232025;
+    font-size: 25px;
+    font-weight: 200;
+}
+#full-right h3{
+    color: #232025;
+    font-size: 25px;
+}
+#page1{
+    width: 100vw;
+    min-height: 100vh;
+    position: relative;
+}
+#nav{
+    width: 100vw;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px 100px;
+    position: fixed;
+    z-index: 99;
+}
+#nav>h3{
+    letter-spacing: .5vw;
+}
+#nav-part2
+{
+    width: 20vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-around;
+}
+#menu{
+    width: 30px;
+    height: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: column;
+    position: relative; 
+}
+#line1{
+    width: 30px;
+    height: 2px;
+    background-color: #D5CDC4;
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) 2s;
+    transform-origin: center;
+}
+#line2{
+    width: 20px;
+    height: 2px;
+    background-color: #D5CDC4;
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) 2s;
+    transform-origin: center;
+}
+.tala{
+    position: absolute;
+    top: 20%;
+    left: 7%;
+    font-size: 12vw;
+}
+.tala::after{
+    content: "R";
+    position: absolute;
+    font-size: 3.5vw;
+    border: solid 3px #D5CDC4;
+    border-radius:50% ;
+    width: 4vw;
+    height:9vh ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2px;
+    right: -10%;
+    top: 5%;
+}
+#sub1-text{
+    position: absolute;
+    top: 60%;
+    left: 20%;
+    font-size: 3vw;
+    font-weight: 100;
+}    
+#sub1-text>h3:nth-child(1){
+    text-align: right;
+}
+#sub2-text{
+    position: absolute;
+    top: 60%;
+    right: 10%;
+    font-size: 1vw;
+}
+#page1-img{
+    width: 80vw;
+    position: absolute;
+    height: 100vh;
+    top: 90vh;
+    left: 50%;
+    transform: translate(-50%);
+    /* transform: scale(1); */
+}
+#page2{
+    height: 100vh;
+    width: 100vw;
+}
+#page3{
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+#page3 h1{
+    position: absolute;
+    width: 80vw;
+    font-size: 5vw;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-weight: 100;
+    line-height: 10vh;
+}
+#page3 h1 span{
+    font-style: italic;
+    font-family: Arima thin;
+    font-weight: 600;
+    color: #D5CDC4;
+}
+#page4{
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+#page4 #line1{
+    width: 10vw;
+    height: 2px;
+    position: absolute;
+    top: 10vh;
+    left: 10%;
+    display: flex;
+    align-items: center;
+}
+#page4 #dot{
+    position: absolute;
+    top: -1vh;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: white;
+}
+#page4 #line1 h6{
+    margin-left: 20vw;
+    margin-top: -2vh;
+}
+#page4 #content{
+    position: absolute;
+    top: 20vh;
+    width: 100vw;
+    height: 65vh;
+}
+#content .fruits{
+    width: 100vw;
+    height:13vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-between;
+    padding: 0 5vw;
+    cursor: pointer;
+} 
+#content .fruits>h1{
+    margin-right: 40vw;
+    font-size: 5vw;
+    font-weight: 900;
+    font-family: Nunito;
+    transition: .3s;
+}
+#content .fruits img{
+    width: 3.2vw;
+}
+#content .fruits>h1:hover{
+    -webkit-text-stroke: 1px #fff;
+    color: #232025;
+}
+#page5{
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+#page5 h1{
+    position: absolute;
+    top: 6vw;
+    left:7vw ;
+    font-size: 8vw;
+    line-height: 15vh;
+    width: 80vw;
+}
+#transibox{
+    display: flex;
+    position: absolute;
+    bottom: 0%;
+    width: 100vw;
+    height: 35vh;
+    border-bottom: 1px solid rgb(157, 157, 157);
+    border-top: 1px solid rgb(157, 157, 157); 
+}
+#transibox #left{
+    width: 70vw;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-right: 10vw;
+}
+#transibox #left h2{
+    font-size: 4vw;
+    line-height: 8.5vh;
+}
+#transibox #right{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30vw;
+    height: 100%;
+    border-left: 1px solid rgb(157, 157, 157);
+}
+#page6{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background-image: url(https://uploads-ssl.webflow.com/61defec4a021d8fe954c11bd/61defec4a021d83ede4c11f8_stars.gif);
+    text-align: center;
+}
+#smile-box h1{
+    font-size: 4vw;
+    line-height: 9vh;
+}
+#smile-box h1:nth-child(2){
+    font-style: italic;
+    font-family: voyage;
+    font-weight: 700;
+}
+#smile-box h4{
+    margin-top: 5vh;
+    margin-bottom: 10vh;
+}
+#smile-box img{
+    animation: smily 3s linear infinite both;
+}
+@keyframes smily {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+#page7{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+#page7 #number{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    line-height: 6.5vh;
+}
+#page7 #number h1:nth-child(2){
+    font-style: italic;
+    font-weight: 700;
+    letter-spacing: 3px;
+    font-family: voyage;    
+}
+#page8{
+    position: relative;
+    width: 100vw;
+    min-height: 100vh;
+}
+#page8 #text{
+   position: absolute;
+   text-align: center;
+   top: 25vh;
+   left: 50%;
+   transform: translate(-50%,-50%);
+   font-size: 1.5vw;
+}
+#page8 #text h1:nth-child(2){
+    font-family: voyage;
+    font-style: italic;
+}
+#YesNo{
+    position: absolute;
+    top: 40vh;
+    width: 100vw;
+    height: 40vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    }
+#imgHover{
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    left: 0%;
+    top: 0%;
+    transform: rotate(2deg);
+    background-size: cover;
+    overflow: hidden;
+    z-index: 9;
+    background-image: url("https://uploads-ssl.webflow.com/61defec4a021d8fe954c11bd/61defec4a021d8f4394c120b_bananas.gif");
+}
+.choice{
+    width: 50vw;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2vw;
+    z-index: 9999;
+}
+#page9{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+#snack{
+    position: absolute;
+    width: 100vw;
+    height: 20vh;
+    font-size: 2vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#snack h1{
+    font-weight: 100;
+}
+#talaBox{
+    position: absolute;
+    top: 10vw;
+    width: 100vw;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#talaBox img{
+    width: 16vw;    
+}
+#talaBox #ek{
+    width: 12vw;
+    position: absolute;
+    left: 18vw;
+}
+#talaBox #do{
+    position: absolute;
+    left: 29vw;
+    width: 14vw;
+}
+#talaBox #teen{
+    width: 16vw;
+    position: absolute;
+    left: 42%;
+    z-index: 999;
+}
+#talaBox #char{
+    position: absolute;
+    right: 29vw;
+    width: 14vw;
+    z-index: 99;
+}
+#talaBox #pach{
+    position: absolute;
+    width: 12vw;
+    right: 18vw;
+    z-index: 9;
+}
+#talaBox .rotate{
+    transition: .5s;
+}
+#talaBox .rotate:hover{
+ transform: rotate(10deg);
+}
+#page10{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+#page10 #nav{
+    position: absolute;
+    width: 60vw;
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+}
+#page10 #nav h5{
+    font-weight: 300;
+}
+#potoBox{
+    position: absolute;
+    top: 15vh;
+    width: 85vw;
+    height: 80vh;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.poto{
+    position: relative;
+    width: 100%;
+    height: 26.6vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-between;
+}
+.poto #two{
+    position: absolute;
+    left: 10vw;
+}
+
+.poto #three{
+    position: absolute;
+    left: 30vw;
+}
+.poto #four{
+    position: absolute;
+    right: 10vw;
+}
+.poto #six{
+    position: absolute;
+    left: 20vw;
+}
+.poto #eight{
+    position: absolute;
+    left: 10vw;
+}
+.poto img{
+    width: 8vw;
+    height: 17vh;
+}
+#page11{
+    position: relative;
+    width: 100vw;
+    height: 120vh;
+}
+#page11 .tala{
+        position: absolute;
+        top: 0%;
+        left: 7%;
+        font-size: 12vw;
+}
+#lastFruitBox{
+    position: absolute;
+    top: 40vh;
+    left: 7vw;
+    width: 40vw;
+    height: 70vh;
+}
+.lastFruit{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 11.6vh;
+    border-bottom: solid 1px rgb(124, 124, 124);
+    padding-top: 6%;
+}
+.lastFruit:hover{
+    border-bottom: 1px solid #D5CDC4;
+}
+#page11 i{
+    font-size: 2vw;
+}
+#input{
+    position: absolute;
+    top: 10%;
+    right: 5vw;
+    width: 40vw;
+    height: 10vh;
+    border-bottom: 1px solid rgb(124, 124, 124) ;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+input{
+    width: 25vw;
+    height: 10vh;
+    font-size: 2vw;
+    outline: none;
+    background-color: transparent;
+    border-color: transparent;
+}
+#lastMenu{
+    position: absolute;
+    top: 40%;
+    right: 40%;
+    font-size: 1.5vw;
+    line-height: 3vh;
+    cursor: pointer;
+}
+#lastMenu h6:hover{
+    border-bottom: solid 1px rgb(157, 157, 157) ;
+}
+#policy{
+    position: absolute;
+    right: 12vw;
+    bottom: 10vh;
+    font-size: 1.4vw;
+    line-height: 20px;
+    cursor: pointer;
+}
+#policy h5{
+    font-size: .8vw;
+}
+#policy h6:hover{
+    border-bottom: solid 1px rgb(157, 157, 157) ;
+}
+@media (max-width:500px) {
+    #nav{
+        height: 80px;
+        padding: 5px 10px;
+        font-size: 3vw;
+    }
+    #nav-part2{
+        text-align: center;
+    }
+    #menu{
+        margin:0px  30px ;
+    }
+    .tala{
+        font-size: 25vw;
+    }
+    .tala::after{
+        width: 10vw;
+        height: 5vh;
+    }
+    #sub1-text{
+        top: 35%;
+        font-size: 5vw;
+        left: 10%;
+    }
+    #sub2-text{
+        top: 50%;
+        font-size: 2vw;
+    }
+    #page1-img{
+        top: 70vh;
+    }
+    #page3{
+        height: 60vh;
+    }
+    #page3 h1{
+        font-size: 7vw;
+        line-height: 5vh;
+        font-weight: 100;
+        width: 80vw;
+    }
+    #content .fruits{
+     height: 5vh;   
+    }
+    #page4{
+        height: 50vh;
+    }
+    #page5 h1{
+        top: 30vh;
+        font-size: 16vw;
+        line-height: 6vh;
+        width: 90vw;
+    }
+    #transibox #left{
+        width: 60vw;
+    }
+    #transibox{
+        height: 30vh;
+        font-size: 3vw;
+    }
+    #transibox #left h2{
+        line-height: 3vh;
+        font-size: 6vw;
+    }
+    #smile-box h1{
+        line-height: 5vh;
+        font-size: 7vw;
+    }
+    #imgHover{
+        width: 22vw;
+        height: 10vh;
+    }
+    #number h1{
+        font-size: 6vw;
+        line-height: 4vh;
+    }
+    #page8 #text h1{
+        font-size: 6vw;
+        width: 80vw;
+    }
+    #YesNo .choice{
+        font-size: 5vw;
+    }
+    #snack h1{
+        font-size: 7vw;
+    }
+    #potoBox .poto .imgPhoto{
+        height: 10vh;
+        width: 20vw;
+    }
+    #two{
+        top: -10vw;
+    }
+    #six{
+        top: -5vh;
+    }
+    #eight{
+        width: 20vw;
+        height: 10vh;
+        top: -5vh;
+    }
+    #page11 .tala{
+        font-size: 25vw;
+    }
+    #input{
+        font-size: 3vw;
+        width: 90vw;
+    }
+    #input input{
+        font-size: 3vw;
+    }
+    .lastFruit{
+        height: 7vh;
+        width: 60vw;
+    }
+    #lastMenu{
+        right: 5vw;
+        font-size: 5vw;
+    }
+    #full-menu{
+        font-size: 20vw;
+    }
+    #full{
+        top: 30vh;
+    }
+    #full-left h3,#full-right>h3{
+        font-size: 6vw ;
+        margin-left: 10vw;
+    }
+}
