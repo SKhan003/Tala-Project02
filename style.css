@@ -583,6 +583,9 @@ input{
         padding: 5px 10px;
         font-size: 3vw;
     }
+    #page1-img{
+        max-height: 33vh;
+    }
     #nav-part2{
         text-align: center;
     }
